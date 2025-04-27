@@ -457,7 +457,7 @@ background-repeat: no-repeat;
 background-position: center;</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -1122,6 +1122,1092 @@ color: #FFFFFF;
              <attribute name="title">
               <string>Page</string>
              </attribute>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QFrame" name="frame_14">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="minimumSize">
+                    <size>
+                     <width>300</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>500</width>
+                     <height>500</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 50px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: #EB5E28;
+background:transparent;
+
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Extract message</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_8">
+                   <property name="styleSheet">
+                    <string notr="true">background:transparent;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <item>
+                     <widget class="QLabel" name="label">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">width: 71;
+height: 49;
+top: 315px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(235, 94, 40, 1);
+</string>
+                      </property>
+                      <property name="text">
+                       <string>messages</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_4">
+                      <property name="styleSheet">
+                       <string notr="true">width: 71;
+height: 49;
+top: 315px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(235, 94, 40, 1);
+</string>
+                      </property>
+                      <property name="text">
+                       <string>date</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line">
+                   <property name="styleSheet">
+                    <string notr="true">border: 1px solid rgba(255, 255, 255, 1);
+width: 1071.0041450629933;
+top: 360.84px;
+left: 251px;
+angle: 0.15 deg;
+border-width: 1px;
+</string>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_9">
+                   <property name="styleSheet">
+                    <string notr="true">background:transparent;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QScrollArea" name="scrollArea">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>700</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QScrollBar:vertical {
+   background:rgb(0, 0, 0);
+}
+
+QScrollBar::handle:vertical {
+    background:rgb(235, 94, 40);
+}
+QScrollBar::add-line:vertical {
+    background:transparent;
+}
+
+QScrollBar::sub-line:vertical {
+    border: 1px solid grey;
+  	background:transparent;
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}</string>
+                      </property>
+                      <property name="widgetResizable">
+                       <bool>true</bool>
+                      </property>
+                      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>553</width>
+                         <height>785</height>
+                        </rect>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_8">
+                        <item>
+                         <widget class="QFrame" name="frame_15">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_7">
+                           <item>
+                            <widget class="QLabel" name="label_13">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="baseSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_14">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_10">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_25">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_17">
+                           <item>
+                            <widget class="QLabel" name="label_33">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_34">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_20">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_18">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_10">
+                           <item>
+                            <widget class="QLabel" name="label_19">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_20">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_11">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_24">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_16">
+                           <item>
+                            <widget class="QLabel" name="label_31">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_32">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_19">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_20">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_12">
+                           <item>
+                            <widget class="QLabel" name="label_23">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_24">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_15">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_23">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_15">
+                           <item>
+                            <widget class="QLabel" name="label_29">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_30">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_18">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_16">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_8">
+                           <item>
+                            <widget class="QLabel" name="label_15">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_16">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_12">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_22">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_14">
+                           <item>
+                            <widget class="QLabel" name="label_27">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_28">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_17">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_17">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_9">
+                           <item>
+                            <widget class="QLabel" name="label_17">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_18">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_13">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_21">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_13">
+                           <item>
+                            <widget class="QLabel" name="label_25">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_26">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_16">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_19">
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_11">
+                           <item>
+                            <widget class="QLabel" name="label_21">
+                             <property name="minimumSize">
+                              <size>
+                               <width>270</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">width: 387;
+height: 49;
+top: 390px;
+left: 333px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>your secret message......</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_22">
+                             <property name="styleSheet">
+                              <string notr="true">width: 160;
+height: 37;
+top: 396px;
+left: 826px;
+font-family: Kdam Thmor Pro;
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 2px;
+text-align: center;
+color: rgba(255, 255, 255, 0.6);
+</string>
+                             </property>
+                             <property name="text">
+                              <string>17/10/2024</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_14">
+                             <property name="maximumSize">
+                              <size>
+                               <width>20</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="resource.qrc">
+                               <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_11">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
           </item>

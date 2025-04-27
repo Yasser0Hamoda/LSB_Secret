@@ -1,6 +1,7 @@
 <RCC>
   <qresource>
     <file>img/logo.png</file>
+    <file>img/trash.png</file>
     <file>img/logo2.png</file>
     <file>img/download.png</file>
     <file>img/BG.png</file>
