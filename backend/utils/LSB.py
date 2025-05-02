@@ -17,18 +17,17 @@ class LSB:
         return None
     
     @staticmethod
-    def embeddedMessage(message:str=None, image:str=None, hashedPassword:str=None):
+    def embeddedMessage(message:str, image:np.ndarray, hashedPassword:str):
         if not isinstance(message, str) and isinstance(hashedPassword, str):
             message=str(message)
             hashedPassword=str(hashedPassword)
-        image=cv2.imread(image)
         #! Adding the hashed password and end indecator, just to know where to end decoding
         message = MESSAGE_START_FLAG+message+MESSAGE_SEP+hashedPassword+MESSAGE_END_FLAG
         #! Number Of Maximum Bytes That The Image Can Hold
         n_bytes = image.shape[0]*image.shape[1]*3//8 
         #! Check wether the image will hold the message or not
         if len(message)>n_bytes:
-            return {'error':'The message is to long to be encoded in the image'}
+            return None
         #! COnverting the message to its binary form in ordr to embeded it inside the image
         message=LSB.__to_bin(message)
         msg_len=len(message)
