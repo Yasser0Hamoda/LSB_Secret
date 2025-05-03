@@ -5,7 +5,7 @@ from config import MESSAGE_START_FLAG, MESSAGE_END_FLAG, MESSAGE_SEP
 class LSB:
     #! Helper function to convert data to its binary form
     @staticmethod
-    def __to_bin(data):
+    def to_bin(data):
         if isinstance(data, str):
             return ''.join([ format(ord(i), "08b") for i in data ])
         if isinstance(data, bytes):
@@ -29,13 +29,13 @@ class LSB:
         if len(message)>n_bytes:
             return None
         #! COnverting the message to its binary form in ordr to embeded it inside the image
-        message=LSB.__to_bin(message)
+        message=LSB.to_bin(message)
         msg_len=len(message)
         
         data_index=0
         for row in image:
             for bixel in row:
-                r, g, b = LSB.__to_bin(bixel)
+                r, g, b = LSB.to_bin(bixel)
                 
                 if data_index<msg_len:
                     bixel[0] = int(r[:-1]+message[data_index],2)
@@ -53,12 +53,11 @@ class LSB:
         return image
     
     @staticmethod
-    def extractMessage(image:str):
-        image=cv2.imread(image)
+    def extractMessage(image:np.ndarray):
         binaryData=''
         for row in image:
             for bixel in row:
-                bixel=LSB.__to_bin(bixel)
+                bixel=LSB.to_bin(bixel)
                 r=bixel[0][-1]
                 g=bixel[1][-1]
                 b=bixel[2][-1]
@@ -72,11 +71,8 @@ class LSB:
         decoded_data = decoded_data[:-len(MESSAGE_END_FLAG)]
         sep_index=decoded_data.find(MESSAGE_SEP)
         if sep_index==-1:
-            return {'error':'The Image Does not contain any messages!'}
+            return None, None
         originalmessage = decoded_data[len(MESSAGE_START_FLAG):sep_index]
         hashedPassword=decoded_data[sep_index+len(MESSAGE_SEP):]
-        return {
-            'message':originalmessage,
-            'password':hashedPassword
-                }
+        return originalmessage,hashedPassword
 
