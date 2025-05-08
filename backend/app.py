@@ -105,7 +105,7 @@ def login():
 @jwt_required()
 def embed():
     user_id = get_jwt_identity()
-    #check the number of parameters    
+    # check the number of parameters    
     if len(request.form)+len(request.files) != 3:
         queries.log_user_action(user_id, 'Embed Message', 'The User Tryed to Embed Message but failed Due to: Invalid Number of Parameters')
         return jsonify({
@@ -253,11 +253,70 @@ def extract():
     #decompress the message
     extractedMessage=compressor.decompress(extractedMessage)
     #return the original message
-    queries.log_user_action(user_id, 'Extract Message', 'The User Extracted The Message Successfully From The Image')
+    queries.log_user_action(user_id, 'Extract Message', 'The User Extracted The Message Successfully From The Image', 'success')
     return jsonify({
         'status':'success',
         'message':extractedMessage
-    })
+    }), 200
+    
+@app.route('/Save_message',methods=['POST'])
+@jwt_required()
+def save_message():
+    user_id = get_jwt_identity()
+    if len(request.form) + len(request.files) != 1:
+        queries.log_user_action(user_id, 'Save Message', 'The User Tryed to Save Message but failed Due to: Invalid Number of Parameters')
+        return jsonify({
+            'status':'fail',
+            'reason':'invalid Number of arguments'
+        }), 400
+        
+    message = request.form.get('message')
+    if not message:
+        queries.log_user_action(user_id, 'Save Message', 'The User Tryed to Save Message but failed Due to: Missing Parameters')
+        return jsonify({
+            'status':'fail',
+            'reason':'Missing Parameters'
+        }), 400
+        
+    saved,msg = queries.save_message(user_id, message)
+    if not saved:
+        queries.log_user_action(user_id, 'Save Message', f'The User Tryed to Save Message but failed Due to: {msg}')
+        return jsonify({
+            'status':'fail',
+            'reason':msg
+        }), 500
+        
+    queries.log_user_action(user_id, 'Save Message', 'The User saved The Message Successfully', 'success')
+    return jsonify({
+        'status':'sucess',
+        'reason':msg
+    }), 200
 
+@app.route('/Get_all_messages', methods=['GET'])
+@jwt_required()
+def Get_all_messages():
+    user_id = get_jwt_identity()
+    if len(request.args) + len(request.files) != 0:
+        queries.log_user_action(user_id, 'get all messages', 'The User Tryed to get all messages but failed Due to: Invalid Number of Parameters')
+        return jsonify({
+            'status':'fail',
+            'reason':'invalid Number of arguments'
+        }), 400
+        
+    success,res=queries.get_all_messages(user_id)
+    if not success:
+        queries.log_user_action(user_id, 'get all messages', f'The User Tryed to get all messages but failed Due to: {res}')
+        return jsonify({
+            'status':'fail',
+            'reason':res
+        }), 500
+        
+    queries.log_user_action(user_id, 'get all messages', 'The User got all the messages Successfully', 'success')
+    return jsonify({
+        'status':'sucess',
+        'messages':res
+    }), 200
+    
+  
 if __name__=='__main__':
     app.run()

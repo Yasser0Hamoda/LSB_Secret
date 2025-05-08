@@ -51,7 +51,7 @@ class queries:
             return True, res[0][0]
     
     @staticmethod
-    def get_user_id(user_name)->tuple[bool, str]:
+    def get_user_id(user_name:str)->tuple[bool, str]:
         """
         gets user ID from his/her username.
 
@@ -99,4 +99,50 @@ class queries:
             return False
         finally:
             conn.close()
+
+    @staticmethod
+    def save_message(user_id:int, message:str)->tuple[bool, str]:
+        '''
+            save the user's message
             
+            Args:
+                use_id (int): the desired user you want to save its messages
+                message (str): the message that the uer want to be saved
+            
+            Returns:
+                tuble(bool, str): a tuble indicating (success, message)
+        '''
+        conn = get_db_conn()
+        cur = conn.cursor()
+        
+        try:
+            cur.execute("INSERT INTO messages('user_id', 'message_text') VALUES(?,?)",(user_id, message))
+            conn.commit()
+            return True, 'The Message has been saved successfully'
+        except:
+            return False, 'Failed to save the message'
+        finally:
+            conn.close()
+    
+    @staticmethod
+    def get_all_messages(user_id:int)->tuple[bool, list]:
+        '''
+            get all messages related to a specific username
+            
+            Args:
+                use_id (int): the desired user you want to get its messages
+            
+            Returns:
+                tuble(bool, list): a tuble indicating (success, list of messages or error message)
+        '''
+        conn = get_db_conn()
+        cur=conn.cursor()
+        
+        try:
+            res = cur.execute('SELECT message_text FROM messages WHERE user_id=?',(user_id,)).fetchall()
+            conn.commit()
+            return True, res
+        except:
+            return False, 'Unable to get all the messages'
+        finally:
+            conn.close()
