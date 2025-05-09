@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, send_file
 from flask_jwt_extended import JWTManager,create_access_token, jwt_required, get_jwt_identity
+from flasgger import Swagger, swag_from 
 from config import ENV_FILE_PATH
 from dotenv import load_dotenv
 import os
@@ -13,12 +14,15 @@ load_dotenv(ENV_FILE_PATH)
 
 app = Flask(__name__)
 app.config['SECRET_KEY']=os.getenv('SECRET_KEY')
+swagger = Swagger(app, template_file = "app/docs/swagger_config.yaml") 
+# swagger = Swagger(app, template_file=os.path.join(os.getcwd(), "docs/swagger_config.yaml")) 
 
 
 jwt = JWTManager(app)
 # routes: register, login, Embed, Extract, Get_all_messages, Save_message
 
 @app.route('/register', methods=['POST'])
+@swag_from("app/docs/register.yaml")
 def register():
     if len(request.form) != 3:
         return jsonify({
@@ -58,6 +62,7 @@ def register():
     })
 
 @app.route('/login', methods=['POST'])
+@swag_from("app/docs/login.yaml")
 def login():
     user_name = request.form.get('user_name')
     password = request.form.get('password')
@@ -103,6 +108,7 @@ def login():
         
 @app.route("/Embed", methods=['POST'])
 @jwt_required()
+@swag_from("app/docs/embed.yaml")
 def embed():
     user_id = get_jwt_identity()
     # check the number of parameters    
@@ -190,6 +196,7 @@ def embed():
 
 @app.route('/Extract', methods=['POST'])
 @jwt_required()
+@swag_from("app/docs/extract.yaml")
 def extract():
     user_id = get_jwt_identity()
     total_param = len(request.form)+len(request.files)
@@ -261,6 +268,7 @@ def extract():
     
 @app.route('/Save_message',methods=['POST'])
 @jwt_required()
+@swag_from("app/docs/save_message.yaml")
 def save_message():
     user_id = get_jwt_identity()
     if len(request.form) + len(request.files) != 1:
@@ -294,6 +302,7 @@ def save_message():
 
 @app.route('/Get_all_messages', methods=['GET'])
 @jwt_required()
+@swag_from("app/docs/get_all_messages.yaml")
 def Get_all_messages():
     user_id = get_jwt_identity()
     if len(request.args) + len(request.files) != 0:
