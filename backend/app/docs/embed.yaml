@@ -1,0 +1,29 @@
+post:
+  summary: Embed an encrypted message into an image
+  security:
+    - Bearer: []
+  parameters:
+    - name: message
+      in: formData
+      type: string
+      required: true
+    - name: password
+      in: formData
+      type: string
+      required: true
+    - name: image
+      in: formData
+      type: file
+      required: true
+  responses:
+    200:
+      description: Successfully returned the stego image
+      content:
+        image/png:
+          schema:
+            type: string
+            format: binary
+    400:
+      description: Validation failed or unsupported image
+    401:
+      description: Unauthorized

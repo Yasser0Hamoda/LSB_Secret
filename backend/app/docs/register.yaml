@@ -1,0 +1,20 @@
+post:
+  summary: Register a new user
+  parameters:
+    - name: user_name
+      in: formData
+      type: string
+      required: true
+    - name: password
+      in: formData
+      type: string
+      required: true
+    - name: pass_confirm
+      in: formData
+      type: string
+      required: true
+  responses:
+    200:
+      description: Registration successful
+    400:
+      description: Validation failed

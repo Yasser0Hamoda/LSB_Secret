@@ -1,0 +1,16 @@
+post:
+  summary: Save a message to the database
+  security:
+    - Bearer: []
+  parameters:
+    - name: message
+      in: formData
+      type: string
+      required: true
+  responses:
+    200:
+      description: Message saved successfully
+    400:
+      description: Missing or invalid message
+    401:
+      description: Unauthorized

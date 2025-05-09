@@ -1,0 +1,29 @@
+post:
+  summary: Extract a hidden message from an image
+  security:
+    - Bearer: []
+  parameters:
+    - name: image
+      in: formData
+      type: file
+      required: true
+    - name: password
+      in: formData
+      type: string
+      required: true
+  responses:
+    200:
+      description: Successfully extracted and decrypted message
+      schema:
+        type: object
+        properties:
+          status:
+            type: string
+            example: success
+          message:
+            type: string
+            example: Hello, this is a secret message!
+    400:
+      description: Extraction or validation failed
+    401:
+      description: Unauthorized

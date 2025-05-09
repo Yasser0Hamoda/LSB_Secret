@@ -1,0 +1,21 @@
+get:
+  summary: Retrieve all messages for the logged-in user
+  security:
+    - Bearer: []
+  responses:
+    200:
+      description: List of user messages
+      schema:
+        type: object
+        properties:
+          status:
+            type: string
+            example: success
+          messages:
+            type: array
+            items:
+              type: string
+    400:
+      description: Bad request
+    401:
+      description: Unauthorized
