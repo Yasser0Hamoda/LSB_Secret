@@ -1,0 +1,19 @@
+swagger: "2.0"
+info:
+  title: Steganography API
+  description: >
+    Secure API to embed and extract encrypted messages inside images using LSB steganography, with JWT authentication and message logging.
+  version: "1.0.0"
+host: "localhost:5000"
+basePath: "/"
+schemes:
+  - http
+consumes:
+  - multipart/form-data
+produces:
+  - application/json
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
