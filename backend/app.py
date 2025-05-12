@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_file
-from flask_jwt_extended import JWTManager,create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import JWTManager,create_access_token, jwt_required, get_jwt_identity, create_refresh_token
 from flasgger import Swagger, swag_from 
+from datetime import timedelta
 from config import ENV_FILE_PATH
 from dotenv import load_dotenv
 import os
@@ -14,6 +15,8 @@ load_dotenv(ENV_FILE_PATH)
 
 app = Flask(__name__)
 app.config['SECRET_KEY']=os.getenv('SECRET_KEY')
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=15)
+app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
 swagger = Swagger(app, template_file = "app/docs/swagger_config.yaml") 
 # swagger = Swagger(app, template_file=os.path.join(os.getcwd(), "docs/swagger_config.yaml")) 
 
@@ -98,15 +101,25 @@ def login():
     if success:
         return jsonify({
             'status':'success',
-            'token': create_access_token(identity=str(user_ID))
+            'access_token': create_access_token(identity=str(user_ID)),
+            'refresh_token': create_refresh_token(identity=str(user_ID))
         }), 200
         
     return jsonify({
         'status':'fail',
         'reason': 'Can Not Create Token'
     }), 500
+
+@app.route('/refresh', methods=['POST'])
+@jwt_required(refresh=True)
+def refresh():
+    user_ID = get_jwt_identity()
+    return jsonify({
+        'status':'success',
+        'access_token':create_access_token(identity=str(user_ID))
+    })
         
-@app.route("/Embed", methods=['POST'])
+@app.route("/embed", methods=['POST'])
 @jwt_required()
 @swag_from("app/docs/embed.yaml")
 def embed():
@@ -194,7 +207,7 @@ def embed():
     
     return response, 200
 
-@app.route('/Extract', methods=['POST'])
+@app.route('/extract', methods=['POST'])
 @jwt_required()
 @swag_from("app/docs/extract.yaml")
 def extract():
@@ -266,7 +279,7 @@ def extract():
         'message':extractedMessage
     }), 200
     
-@app.route('/Save_message',methods=['POST'])
+@app.route('/save_message',methods=['POST'])
 @jwt_required()
 @swag_from("app/docs/save_message.yaml")
 def save_message():
@@ -300,7 +313,7 @@ def save_message():
         'reason':msg
     }), 200
 
-@app.route('/Get_all_messages', methods=['GET'])
+@app.route('/get_all_messages', methods=['GET'])
 @jwt_required()
 @swag_from("app/docs/get_all_messages.yaml")
 def Get_all_messages():
