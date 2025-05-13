@@ -18,11 +18,9 @@ app.config['SECRET_KEY']=os.getenv('SECRET_KEY')
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=15)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
 swagger = Swagger(app, template_file = "app/docs/swagger_config.yaml") 
-# swagger = Swagger(app, template_file=os.path.join(os.getcwd(), "docs/swagger_config.yaml")) 
 
 
 jwt = JWTManager(app)
-# routes: register, login, Embed, Extract, Get_all_messages, Save_message
 
 @app.route('/register', methods=['POST'])
 @swag_from("app/docs/register.yaml")

@@ -457,7 +457,7 @@ background-repeat: no-repeat;
 background-position: center;</string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -664,6 +664,9 @@ color: #FFFFFF;
                          <property name="styleSheet">
                           <string notr="true">background:transparent;</string>
                          </property>
+                         <property name="readOnly">
+                          <bool>true</bool>
+                         </property>
                         </widget>
                        </item>
                        <item>
@@ -750,6 +753,9 @@ font-size: 20px;
 line-height: 100%;
 color: #FFFFFF;
 </string>
+                      </property>
+                      <property name="echoMode">
+                       <enum>QLineEdit::Password</enum>
                       </property>
                      </widget>
                     </item>
@@ -973,6 +979,9 @@ color: #FFFFFF;
                          <property name="styleSheet">
                           <string notr="true">background:transparent;</string>
                          </property>
+                         <property name="readOnly">
+                          <bool>true</bool>
+                         </property>
                         </widget>
                        </item>
                        <item>
@@ -1041,6 +1050,12 @@ font-size: 20px;
 line-height: 100%;
 color: #FFFFFF;
 </string>
+                      </property>
+                      <property name="frame">
+                       <bool>false</bool>
+                      </property>
+                      <property name="echoMode">
+                       <enum>QLineEdit::Password</enum>
                       </property>
                      </widget>
                     </item>
@@ -1293,8 +1308,8 @@ QScrollBar::sub-line:vertical {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>553</width>
-                         <height>785</height>
+                         <width>573</width>
+                         <height>705</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1376,7 +1391,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1456,7 +1471,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1536,7 +1551,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1616,7 +1631,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1696,7 +1711,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1776,7 +1791,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1856,7 +1871,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -1936,7 +1951,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -2016,7 +2031,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -2096,7 +2111,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>
@@ -2176,7 +2191,7 @@ color: rgba(255, 255, 255, 0.6);
                               <string/>
                              </property>
                              <property name="icon">
-                              <iconset resource="resource.qrc">
+                              <iconset>
                                <normaloff>:/img/trash.png</normaloff>:/img/trash.png</iconset>
                              </property>
                             </widget>

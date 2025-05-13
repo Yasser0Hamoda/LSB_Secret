@@ -1,0 +1,21 @@
+<RCC>
+  <qresource>
+    <file>output-onlinepngtools (1).png</file>
+    <file>output-onlinepngtools.png</file>
+    <file>eye.ico</file>
+    <file>eye-slash.ico</file>
+    <file>img/profile.png</file>
+    <file>img/password.png</file>
+    <file>img/main.png</file>
+    <file>img/logo.png</file>
+    <file>img/logo2.png</file>
+    <file>img/download.png</file>
+    <file>img/BG.png</file>
+    <file>img/home.png</file>
+    <file>img/decoder.png</file>
+    <file>img/encoder.png</file>
+    <file>img/saves.png</file>
+    <file>img/email.png</file>
+    <file>img/trash.png</file>
+  </qresource>
+</RCC>
