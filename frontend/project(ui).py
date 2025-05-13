@@ -5,7 +5,7 @@ from PyQt6.QtCore import QUrl, QRect, Qt, QSize
 from PyQt6.QtGui import QDesktopServices, QIcon, QCursor
 from PyQt6 import QtCore, QtGui, QtWidgets
 from img import *
-import resource_rc
+import resource_rcc
 
 MainUI, _ = loadUiType('project.ui')
 
