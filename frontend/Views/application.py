@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow, QFileDialog
+from PyQt6.QtWidgets import QMainWindow, QFileDialog, QLineEdit
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUiType
 import os,sys
@@ -17,33 +17,34 @@ class application(QMainWindow, MainUI):
         self.setWindowIcon(QIcon('img/logo.png'))
         self.setWindowTitle("LSB")
         self.handle_buttons()
-        self.UI_Chanages()
         self.openHomePage()
         self.showMaximized()
-
-    def UI_Chanages(self):
-        self.tabWidget.tabBar().setVisible(False)
 
 
     def handle_buttons(self):  # Corrected function name
         self.pushButton_2.clicked.connect(self.openHomePage)
+        self.pushButton_2.setChecked(True)
         self.pushButton.clicked.connect(self.openEmbdedPage)
         self.pushButton_3.clicked.connect(self.openExtractPage)
         self.pushButton_4.clicked.connect(self.openHistoryPage)
-        self.pushButton_8.clicked.connect(lambda flag: self.Browseimg(self.lineEdit_3)) 
-        self.pushButton_9.clicked.connect(lambda flag: self.Browseimg(self.lineEdit_5))
+        self.pushButton_11.clicked.connect(lambda : self.Browseimg(self.lineEdit_7)) 
+        self.pushButton_9.clicked.connect(lambda : self.Browseimg(self.lineEdit_5))
+        self.showPassword.pressed.connect(lambda: self.lineEdit_2.setEchoMode(QLineEdit.EchoMode.Normal))
+        self.showPassword.released.connect(lambda: self.lineEdit_2.setEchoMode(QLineEdit.EchoMode.Password))
+        self.showPassword_2.pressed.connect(lambda: self.lineEdit_6.setEchoMode(QLineEdit.EchoMode.Normal))
+        self.showPassword_2.released.connect(lambda: self.lineEdit_6.setEchoMode(QLineEdit.EchoMode.Password))
 
     def openHomePage(self):
-        self.tabWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(0)
         
     def openEmbdedPage(self):
-        self.tabWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(1)
 
     def openExtractPage(self):
-        self.tabWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(2)
         
     def openHistoryPage(self):
-        self.tabWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(3)
 
     def Browseimg(self,value):
         fname = QFileDialog.getOpenFileName(self, "Open Image", "", "Images (*.png *.xpm *.jpg *.jpeg *.bmp)")

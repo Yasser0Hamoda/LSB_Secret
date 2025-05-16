@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QApplication, QPushButton, QLineEdit
+from PyQt6.QtWidgets import QWidget, QApplication, QLineEdit
 from PyQt6.QtGui import QRegularExpressionValidator
 from PyQt6.QtCore import Qt, QRegularExpression
 from PyQt6.uic import loadUiType

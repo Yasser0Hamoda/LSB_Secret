@@ -90,6 +90,7 @@ class API_client:
             if response.status_code == 401:
                 result = API_client.__refresh()
                 if not result:
+                    tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.embed(message,password,image_path)
             elif response.status_code != 200:
@@ -123,6 +124,7 @@ class API_client:
             if response.status_code == 401:
                 res = API_client.__refresh()
                 if not res:
+                    tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.extract(image_path,password)
             return dict(response.json())
@@ -139,6 +141,7 @@ class API_client:
             if response.status_code==401:
                 res = API_client.__refresh()
                 if not res:
+                    tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.save_message(message)
             return dict(response.json())
@@ -155,6 +158,7 @@ class API_client:
             if response.status_code==401:
                 res = API_client.__refresh()
                 if not res:
+                    tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.get_all_messages()
             return dict(response.json())
