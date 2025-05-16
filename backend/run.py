@@ -15,7 +15,7 @@ load_dotenv(ENV_FILE_PATH)
 
 app = Flask(__name__)
 app.config['SECRET_KEY']=os.getenv('SECRET_KEY')
-app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=15)
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=0.5)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
 swagger = Swagger(app, template_file = "app/docs/swagger_config.yaml") 
 
@@ -54,12 +54,12 @@ def register():
     if not res:
         return jsonify({
             'status':'fail',
-            'reason':msg
+            'reason':str(msg)
         }), 400
         
     return jsonify({
         'status':'success',
-        'message':msg
+        'message':str(msg)
     })
 
 @app.route('/login', methods=['POST'])
@@ -336,7 +336,6 @@ def Get_all_messages():
         'status':'sucess',
         'messages':res
     }), 200
-    
   
 if __name__=='__main__':
     app.run()

@@ -17,5 +17,5 @@ class helper:
     def makeFailureResponse(reason:str)->dict:
         return {
             'status':'fail',
-            'reason':reason
+            'reason':str(reason)
         }

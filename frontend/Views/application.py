@@ -19,6 +19,7 @@ class application(QMainWindow, MainUI):
         self.handle_buttons()
         self.UI_Chanages()
         self.openHomePage()
+        self.showMaximized()
 
     def UI_Chanages(self):
         self.tabWidget.tabBar().setVisible(False)

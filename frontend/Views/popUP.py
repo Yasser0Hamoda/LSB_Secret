@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QDialog, QLabel, QHBoxLayout
-from PyQt6.QtCore import Qt, QPropertyAnimation, QTimer, QRectF
+from PyQt6.QtCore import Qt, QPropertyAnimation, QTimer, QRectF, QPoint
 from PyQt6.QtGui import QPixmap, QPainter, QPainterPath, QBrush, QColor
 
 class CustomPopup(QDialog):
@@ -27,10 +27,10 @@ class CustomPopup(QDialog):
             popup_rect = self.frameGeometry()
             center_point = parent_rect.center()
             popup_rect.moveCenter(center_point)
-            self.move(popup_rect.topLeft())
+            self.move(popup_rect.topLeft()-QPoint(320,320))
 
         self.animation = QPropertyAnimation(self, b"windowOpacity")
-        self.animation.setDuration(1000)
+        self.animation.setDuration(1500)
         self.animation.setStartValue(0.0)
         self.animation.setEndValue(1.0)
         self.animation.finished.connect(self.close)
@@ -39,6 +39,7 @@ class CustomPopup(QDialog):
         self.timer.setSingleShot(True)
         self.timer.timeout.connect(self.__startClosingAnimation)
         self.timer.start(1000)  # Close after 3 seconds
+        self.show()
                 
     def __startClosingAnimation(self):
         self.animation.setDirection(QPropertyAnimation.Direction.Backward)
