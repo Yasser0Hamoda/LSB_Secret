@@ -333,7 +333,7 @@ def Get_all_messages():
         
     queries.log_user_action(user_id, 'get all messages', 'The User got all the messages Successfully', 'success')
     return jsonify({
-        'status':'sucess',
+        'status':'success',
         'messages':res
     }), 200
   
