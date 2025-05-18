@@ -69,7 +69,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
     <property name="leftMargin">
-     <number>20</number>
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
     </property>
     <item row="0" column="0">
      <widget class="QFrame" name="frame_2">
@@ -92,7 +104,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <string notr="true">background-color: rgb(64, 61, 57);
 width: 185;
 left: -25px;
-border-radius: 50px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
 </string>
       </property>
       <property name="frameShape">
@@ -619,12 +632,12 @@ background:transparent;
 </string>
                 </property>
                 <property name="text">
-                 <string>your message</string>
+                 <string>Your Message</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QTextEdit" name="textEdit_2">
+               <widget class="QTextEdit" name="messageInput">
                 <property name="styleSheet">
                  <string notr="true">QTextEdit{
 background: rgba(64, 61, 57, 0.7);
@@ -721,7 +734,7 @@ color: #FFFFFF;
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_5">
+                  <widget class="QLineEdit" name="imagePathInput">
                    <property name="styleSheet">
                     <string notr="true">background:transparent;
 padding:0px 30px;</string>
@@ -732,7 +745,7 @@ padding:0px 30px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_9">
+                  <widget class="QPushButton" name="selectImageButton">
                    <property name="styleSheet">
                     <string notr="true">QPushButton{
 background-color:rgb(56, 54, 50);
@@ -821,7 +834,7 @@ color: #FFFFFF;
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_6">
+                  <widget class="QLineEdit" name="passwordInput">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -911,7 +924,7 @@ icon:url(:/img/output-onlinepngtools (1).png);
              </property>
              <layout class="QGridLayout" name="gridLayout_7">
               <item row="0" column="0">
-               <widget class="QPushButton" name="pushButton_10">
+               <widget class="QPushButton" name="embedButton">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -951,6 +964,9 @@ background-color:rgb(218, 85, 37);
                 </property>
                 <property name="text">
                  <string>Embed</string>
+                </property>
+                <property name="shortcut">
+                 <string>Return</string>
                 </property>
                </widget>
               </item>
@@ -1098,7 +1114,7 @@ color: #FFFFFF;
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_7">
+                  <widget class="QLineEdit" name="extractImageInput">
                    <property name="styleSheet">
                     <string notr="true">background:transparent;
 padding:0px 30px;</string>
@@ -1109,7 +1125,7 @@ padding:0px 30px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_11">
+                  <widget class="QPushButton" name="uploadImageButton">
                    <property name="minimumSize">
                     <size>
                      <width>60</width>
@@ -1210,7 +1226,7 @@ color: #FFFFFF;
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="extractImagePasswordInput">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -1304,7 +1320,7 @@ icon:url(:/img/output-onlinepngtools (1).png);
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
               <item row="0" column="0">
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="extractButton">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1341,6 +1357,9 @@ background-color:rgb(218, 85, 37);
                 </property>
                 <property name="text">
                  <string>Extract</string>
+                </property>
+                <property name="shortcut">
+                 <string>Return</string>
                 </property>
                </widget>
               </item>
@@ -1432,28 +1451,7 @@ color: rgba(235, 94, 40, 1);
 </string>
                 </property>
                 <property name="text">
-                 <string>messages</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_9">
-                <property name="styleSheet">
-                 <string notr="true">width: 71;
-height: 49;
-top: 315px;
-left: 826px;
-font-family: Kdam Thmor Pro;
-font-weight: 400;
-font-size: 32px;
-line-height: 100%;
-letter-spacing: 2px;
-text-align: center;
-color: rgba(235, 94, 40, 1);
-</string>
-                </property>
-                <property name="text">
-                 <string>date</string>
+                 <string>Your Messages</string>
                 </property>
                </widget>
               </item>
@@ -1504,6 +1502,11 @@ border-width: 1px;
 QScrollBar::handle:vertical {
     background:rgb(235, 94, 40);
 }
+
+QScrollBar::handle:horizontal {
+    background:rgb(235, 94, 40);
+}
+
 QScrollBar::add-line:vertical {
     background:transparent;
 }
@@ -1524,99 +1527,16 @@ QScrollBar::sub-line:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>669</width>
-                   <height>382</height>
+                   <width>704</width>
+                   <height>567</height>
                   </rect>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_11">
-                  <item>
-                   <widget class="QFrame" name="frame_30">
-                    <property name="styleSheet">
-                     <string notr="true">background:transparent;</string>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_21">
-                     <item>
-                      <widget class="QLabel" name="label_40">
-                       <property name="minimumSize">
-                        <size>
-                         <width>270</width>
-                         <height>0</height>
-                        </size>
-                       </property>
-                       <property name="baseSize">
-                        <size>
-                         <width>270</width>
-                         <height>0</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">width: 387;
-height: 49;
-top: 390px;
-left: 333px;
-font-family: Kdam Thmor Pro;
-font-weight: 400;
-font-size: 32px;
-line-height: 100%;
-letter-spacing: 2px;
-text-align: center;
-color: rgba(255, 255, 255, 0.8);
-</string>
-                       </property>
-                       <property name="text">
-                        <string>your secret message......</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_41">
-                       <property name="styleSheet">
-                        <string notr="true">width: 160;
-height: 37;
-top: 396px;
-left: 826px;
-font-family: Kdam Thmor Pro;
-font-weight: 400;
-font-size: 24px;
-line-height: 100%;
-letter-spacing: 2px;
-text-align: center;
-color: rgba(255, 255, 255, 0.6);
-</string>
-                       </property>
-                       <property name="text">
-                        <string>17/10/2024</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
+                 <layout class="QVBoxLayout" name="verticalLayout_11"/>
                 </widget>
                </widget>
               </item>
              </layout>
             </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer_13">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </widget>

@@ -51,7 +51,8 @@ class API_client:
         except requests.RequestException as e:
             return helper.makeFailureResponse(e)
 
-    def __refresh():
+    @staticmethod
+    def refresh():
         '''Function to refresh the access token'''
         headers={
             'Authorization':f'Bearer {tm.refresh_token}'
@@ -62,7 +63,8 @@ class API_client:
             status = response.get('status')
             if status == 'success':
                 tm.set_access_token(response.get('access_token'))
-            return True
+                return True
+            return False
         except:
             return False
       
@@ -78,17 +80,19 @@ class API_client:
             'message':message,
             'password':password,
         }
-        with open(image_path,'rb') as image_file:
-            files={
-                'image':image_file
-            }
+        image_file=open(image_path,'rb')
+        files={
+            'image':image_file
+        }
+        if tm.access_token is None:
+            return helper.makeFailureResponse('tokens has expired, you have to login again!')
         headers={
             'Authorization':f'Bearer {tm.access_token}'
         }
         try:
             response = requests.post(url=EMBED_ENDPOINT_URL, files=files, headers=headers, data=data)
             if response.status_code == 401:
-                result = API_client.__refresh()
+                result = API_client.refresh()
                 if not result:
                     tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
@@ -96,9 +100,14 @@ class API_client:
             elif response.status_code != 200:
                 return dict(response.json())
             else:
-                return response
+                return {
+                    'status':'success',
+                    'image':response
+                }
         except requests.RequestException as e:
             return helper.makeFailureResponse(str(e))
+        finally:
+            image_file.close()
 
     @staticmethod
     def extract(image_path:str, password:str):
@@ -112,34 +121,42 @@ class API_client:
         data={
             'password':password
         }
-        with open(image_path, 'rb') as miage_file:
-            files={
-                'image':miage_file
-            }
+        image_file= open(image_path, 'rb')
+        files={
+            'image':image_file
+        }
+        if tm.access_token is None:
+            return helper.makeFailureResponse('tokens has expired, you have to login again!')
+
         headers={
             'Authorization':f'Bearer {tm.access_token}'
         }
         try:
             response = requests.post(url=EXTRACT_ENDPOINT_URL,data=data, files=files, headers=headers)
             if response.status_code == 401:
-                res = API_client.__refresh()
+                res = API_client.refresh()
                 if not res:
                     tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.extract(image_path,password)
             return dict(response.json())
-        except requests.RequestException as e:
-            return helper.makeFailureResponse(str(e))
+        except:
+            return helper.makeFailureResponse('Unable to extract the message!')
+        finally:
+            image_file.close()
     
     @staticmethod
     def save_message(message:str):
         if not helper.there_is_internet_connection():
             return helper.makeFailureResponse('There is no internet connection!')
         
+        if tm.access_token is None:
+            return helper.makeFailureResponse('tokens has expired, you have to login again!')
+
         try:
             response = requests.post(url=SAVE_MESSAGE_ENDPOINT_URL,data={'message':str(message)},headers={'Authorization':f'Bearer {tm.access_token}'})
             if response.status_code==401:
-                res = API_client.__refresh()
+                res = API_client.refresh()
                 if not res:
                     tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
@@ -153,16 +170,21 @@ class API_client:
         if not helper.there_is_internet_connection():
             return helper.makeFailureResponse('There is no internet connection!')
         
+        if tm.access_token is None:
+            return helper.makeFailureResponse('tokens has expired, you have to login again!')
+        
         try:
             response = requests.get(url=GET_ALL_MESSAGES_ENDPOINT_URL,headers={'Authorization':f'Bearer {tm.access_token}'})
             if response.status_code==401:
-                res = API_client.__refresh()
+                res = API_client.refresh()
                 if not res:
                     tm.clear()
                     return helper.makeFailureResponse('tokens has expired, you have to login again!')
                 return API_client.get_all_messages()
-            return dict(response.json())
-        except requests.RequestException as e:
-            return helper.makeFailureResponse(str(e))
+            result=[]
+            for item in dict(response.json()).get('messages'):
+                result.append(item[0])
+            return {'status':'success','messages':result}
+        except:
+            return helper.makeFailureResponse('Unable To get The Messages!')
         
-            

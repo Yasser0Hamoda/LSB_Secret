@@ -686,6 +686,9 @@ background-color:rgb(208, 81, 35);
                <property name="text">
                 <string>LOG IN</string>
                </property>
+               <property name="shortcut">
+                <string>Return</string>
+               </property>
               </widget>
              </item>
              <item>
@@ -1229,6 +1232,9 @@ background-color:rgb(208, 81, 35);
                </property>
                <property name="text">
                 <string>SIGN UP</string>
+               </property>
+               <property name="shortcut">
+                <string>Return</string>
                </property>
               </widget>
              </item>

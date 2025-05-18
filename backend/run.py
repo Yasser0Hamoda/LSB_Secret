@@ -307,7 +307,7 @@ def save_message():
         
     queries.log_user_action(user_id, 'Save Message', 'The User saved The Message Successfully', 'success')
     return jsonify({
-        'status':'sucess',
+        'status':'success',
         'reason':msg
     }), 200
 

@@ -9,6 +9,7 @@ class CustomPopup(QDialog):
         self.setWindowTitle("Custom Popup")
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.setStyleSheet('background-color:white;')
         
         layout = QHBoxLayout()
         
