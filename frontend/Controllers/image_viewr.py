@@ -1,14 +1,11 @@
 from PyQt6.QtWidgets import QDialog, QApplication, QFileDialog, QGraphicsBlurEffect
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtCore import Qt, QPropertyAnimation, QPoint, QEasingCurve, QByteArray
-from PyQt6.uic import loadUiType
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config import IMAGE_VIEWR_UI_FILE_PATH
+from Views.image_viewr_view import Ui_Form as image_viewr
 import resources.resource_rc as resource_rc
-from Views.popUP import CustomPopup
-
-image_viewr, _ = loadUiType(IMAGE_VIEWR_UI_FILE_PATH)
+from Controllers.popUP import CustomPopup
 
 
 class imageViewr(QDialog, image_viewr):

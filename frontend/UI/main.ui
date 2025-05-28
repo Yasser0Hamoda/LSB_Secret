@@ -112,10 +112,10 @@ border-bottom-right-radius: 50px;
 </string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Plain</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <property name="spacing">
@@ -541,7 +541,7 @@ background-attachment: fixed;
 </string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page"/>
       <widget class="QWidget" name="page_2">
@@ -549,10 +549,10 @@ background-attachment: fixed;
         <item row="0" column="0">
          <widget class="QFrame" name="frame_6">
           <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
+           <enum>QFrame::NoFrame</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Plain</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_6">
            <item>
@@ -715,10 +715,10 @@ color: #FFFFFF;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Plain</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_4">
                  <property name="spacing">
@@ -830,10 +830,10 @@ color: #FFFFFF;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Plain</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
                  <item>
@@ -920,10 +920,10 @@ icon:url(:/img/output-onlinepngtools (1).png);
 </string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Plain</enum>
              </property>
              <layout class="QGridLayout" name="gridLayout_7">
               <item row="0" column="0">
@@ -986,10 +986,10 @@ background-color:rgb(218, 85, 37);
         <item row="0" column="0">
          <widget class="QFrame" name="frame_7">
           <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
+           <enum>QFrame::NoFrame</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Plain</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
@@ -998,10 +998,10 @@ background-color:rgb(218, 85, 37);
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Plain</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_3">
               <item>
@@ -1095,10 +1095,10 @@ color: #FFFFFF;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Plain</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
                  <property name="spacing">
@@ -1222,10 +1222,10 @@ color: #FFFFFF;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Plain</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout">
                  <item>
@@ -1316,10 +1316,10 @@ icon:url(:/img/output-onlinepngtools (1).png);
 </string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Plain</enum>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
               <item row="0" column="0">
@@ -1382,10 +1382,10 @@ background-color:rgb(218, 85, 37);
            <string notr="true"/>
           </property>
           <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
+           <enum>QFrame::NoFrame</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Plain</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_6">
            <item row="0" column="0">
@@ -1425,10 +1425,10 @@ background:transparent;
               <string notr="true">background:transparent;</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Plain</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_19">
               <item>
@@ -1483,10 +1483,10 @@ border-width: 1px;
               <string notr="true">background:transparent;</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Plain</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_20">
               <item>
@@ -1530,8 +1530,8 @@ QScrollBar::sub-line:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>672</width>
-                   <height>567</height>
+                   <width>676</width>
+                   <height>573</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11"/>

@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from Views.loginForm import loginForm
-from Views.application import application
+from Controllers.loginForm import loginForm
+from Controllers.application import application
 from utils.tokenManager import TokenManager
 from utils.helper import helper
 from API_client import API_client

@@ -1,17 +1,14 @@
 from PyQt6.QtWidgets import QWidget, QApplication, QLineEdit
 from PyQt6.QtGui import QRegularExpressionValidator
 from PyQt6.QtCore import Qt, QRegularExpression
-from PyQt6.uic import loadUiType
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config import LOGIN_FORM_UI_FILE_PATH
-from Views.popUP import CustomPopup
-from Views.application import application
+from Controllers.popUP import CustomPopup
+from Controllers.application import application
 import resources.resource_rc as resource_rc
 from API_client import API_client
+from Views.Login_SignUp_Form_view import Ui_Form as loginform
 
-
-loginform,_ = loadUiType(LOGIN_FORM_UI_FILE_PATH)
 
 class loginForm(QWidget, loginform):
     def __init__(self, parent=None):

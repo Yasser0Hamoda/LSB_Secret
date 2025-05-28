@@ -1,16 +1,13 @@
 from PyQt6.QtWidgets import QMainWindow, QFileDialog, QLineEdit, QVBoxLayout, QLabel
 from PyQt6.QtGui import QIcon
-from PyQt6.uic import loadUiType
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config import MAIN_UI_FILE_PATH
 import resources.resource_rc as resource_rc
-from Views.image_viewr import imageViewr
-from Views.message_viewr import messageViewr
-from Views.popUP import CustomPopup
+from Controllers.image_viewr import imageViewr
+from Controllers.message_viewr import messageViewr
+from Controllers.popUP import CustomPopup
 from API_client import API_client
-
-MainUI, _ = loadUiType(MAIN_UI_FILE_PATH)
+from Views.main_view import Ui_MainWindow as MainUI
 
 class application(QMainWindow, MainUI):
     def __init__(self, parent=None):

@@ -1,15 +1,13 @@
 from PyQt6.QtWidgets import QDialog, QApplication, QGraphicsBlurEffect
 from PyQt6.QtCore import Qt, QRect, QPropertyAnimation, QEasingCurve, pyqtSignal
-from PyQt6.uic import loadUiType
 import os, sys
 import clipboard
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config import MESSAGE_VIEWR_UI_FILE_PATH
-from Views.popUP import CustomPopup
+from Controllers.popUP import CustomPopup
 from API_client import API_client
+from Views.message_viewer_view import Ui_Form as message_viewr
 
-message_viewr, _ = loadUiType(MESSAGE_VIEWR_UI_FILE_PATH)
 
 
 class messageViewr(QDialog, message_viewr):

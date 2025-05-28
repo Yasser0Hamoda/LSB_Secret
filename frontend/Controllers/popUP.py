@@ -14,6 +14,7 @@ class CustomPopup(QDialog):
         layout = QHBoxLayout()
         
         label = QLabel(message)
+        label.setStyleSheet('color:black')
         label2 = QLabel()
         if icon_type == "error":
             label2.setPixmap(QPixmap("frontend/resources/icons/error-4-24.ico"))
