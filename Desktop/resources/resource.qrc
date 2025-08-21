@@ -1,0 +1,31 @@
+<RCC>
+  <qresource>
+    <file>img/Quit_Colorfull.png</file>
+    <file>img/quit.png</file>
+    <file>icons/error-4-24.ico</file>
+    <file>icons/ok-24.ico</file>
+    <file>icons/copy-48.ico</file>
+    <file>img/880eef29f787c838e5be91b50d4f475dd29b0bfc (1).ico</file>
+    <file>img/profile.png</file>
+    <file>img/output-onlinepngtools (1).png</file>
+    <file>img/output-onlinepngtools.png</file>
+    <file>img/password.png</file>
+    <file>img/main.png</file>
+    <file>img/logo.png</file>
+    <file>img/logo2.png</file>
+    <file>img/download.png</file>
+    <file>img/BG.png</file>
+    <file>img/home.png</file>
+    <file>img/decoder.png</file>
+    <file>img/encoder.png</file>
+    <file>img/saves.png</file>
+    <file>img/email.png</file>
+    <file>img/trash.png</file>
+    <file>img/quit.png</file>
+    <file>img/Quit_Colorfull.png</file>
+    <file>img/spinner.gif</file>
+  </qresource>
+  <qresource prefix="Fonts">
+    <file>Fonts/KdamThmorPro-Regular.ttf</file>
+  </qresource>
+</RCC>

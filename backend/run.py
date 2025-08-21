@@ -336,6 +336,6 @@ def Get_all_messages():
         'status':'success',
         'messages':res
     }), 200
-  
+
 if __name__=='__main__':
     app.run()
