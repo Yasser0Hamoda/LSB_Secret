@@ -6,7 +6,7 @@ MAIN_UI_FILE_PATH = os.path.join(BASE_DIR, 'UI', 'main.ui')
 IMAGE_VIEWR_UI_FILE_PATH = os.path.join(BASE_DIR, 'UI', 'image_viewr.ui')
 MESSAGE_VIEWR_UI_FILE_PATH = os.path.join(BASE_DIR, 'UI', 'message_viewer.ui')
 
-BASE_URL = 'http://127.0.0.1:5000'
+BASE_URL = 'https://lsb-secret.up.railway.app'
 REGISTER_ENDPOINT_URL = BASE_URL+'/register'
 LOGIN_ENDPOINT_URL = BASE_URL+'/login'
 REFRESH_ENDPOINT_URL = BASE_URL + '/refresh'
