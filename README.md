@@ -97,10 +97,11 @@ The official website provides:
 3. Launch the application from shortcut
 4. Enjoy!
 
+
 **Mobile**
-1.Download The APK File from The [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
-2.Setup The Application
-3.And Also Enjoy😁 !
+1. Download The APK File from The [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
+2. Setup The Application
+3. And Also Enjoy😁 !
 
 ---
 
