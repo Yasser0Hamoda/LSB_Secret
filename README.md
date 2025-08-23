@@ -66,7 +66,7 @@ LSB_Secret is a steganography tool that allows users to hide confidential text m
 - Works completely offline
 - Compatible with Android 8+
 
-📥 [Download APK](https://yourwebsite.com/download)
+📥 [Download APK](https://github.com/Yasser0Hamoda/LSB_Secret/releases/download/V1.0.0/LSB.Secret.apk)
 
 <img width="461" height="834" alt="image" src="assets/mobile_embed.jpg" />
 
@@ -89,12 +89,18 @@ The official website provides:
 
 ### 🛠 Installation
 
-1. Download the latest version of `LSB_Secret_Setup.exe` from the [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
+**Desktop**
+1. Download the latest version of `LSB_Secret_Setup.exe` From The [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
 2. Run the installer:
    - Installs all dependencies
    - Adds shortcut to Desktop / Start Menu
 3. Launch the application from shortcut
 4. Enjoy!
+
+**Mobile**
+1.Download The APK File from The [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
+2.Setup The Application
+3.And Also Enjoy😁 !
 
 ---
 
