@@ -51,7 +51,7 @@ LSB_Secret is a steganography tool that allows users to hide confidential text m
 - Built-in message history viewer
 - Installer includes all dependencies
 
-  📥 [Download EXE](https://yourwebsite.com/download)
+  📥 [Download EXE](https://github.com/Yasser0Hamoda/LSB_Secret/releases/download/V1.0.0/LSB_Secret_Installer.exe)
 
 <img width="1920" height="995" alt="image" src="assets/embed.png" />
 
