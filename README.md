@@ -2,13 +2,13 @@
 
 Welcome to **LSB_Secret** — a powerful, secure steganography application that lets you embed secret messages inside images using the Least Significant Bit (LSB) technique. Designed for both **Desktop** and **Mobile**, and supported by a dedicated **Website**, our solution ensures message protection, pixel by pixel.
 
-![WhatsApp Image 2025-08-05 at 16 19 21_e9960099](https://github.com/user-attachments/assets/a4e9cc7c-a131-46b1-b41a-8b48f2af3589)
+![WhatsApp Image 2025-08-05 at 16 19 21_e9960099](assets/banner.jpg)
 
 ---
 
 ## 📱 Platforms
 
-- **🖥️ Desktop Application** (Windows .exe installer)
+- **🖥️ Desktop Application** (.exe installer)
 - **📱 Android Mobile Application** (APK)
 - **🌐 Website**: Learn more, see features, and download apps
 
@@ -51,8 +51,9 @@ LSB_Secret is a steganography tool that allows users to hide confidential text m
 - Built-in message history viewer
 - Installer includes all dependencies
 
-<img width="1920" height="995" alt="image" src="https://github.com/user-attachments/assets/eb33dae3-55f2-4ae8-a0cb-c12aefbfaa6a" />
+  📥 [Download EXE](https://yourwebsite.com/download)
 
+<img width="1920" height="995" alt="image" src="assets/embed.png" />
 
 ---
 
@@ -67,8 +68,7 @@ LSB_Secret is a steganography tool that allows users to hide confidential text m
 
 📥 [Download APK](https://yourwebsite.com/download)
 
-<img width="461" height="834" alt="image" src="https://github.com/user-attachments/assets/dd47b7ed-4a88-41a7-84ba-48821490cea5" />
-
+<img width="461" height="834" alt="image" src="assets/mobile_embed.jpg" />
 
 ---
 
@@ -83,13 +83,13 @@ The official website provides:
 
 🔗 [Visit Website](https://lsb-secret.vercel.app/)
 
-<img width="1920" height="925" alt="image" src="https://github.com/user-attachments/assets/fdc2bb00-6d6c-48f5-8f9a-1a75efdd966b" />
+<img width="1920" height="925" alt="image" src="assets/website.jpg" />
 
 ---
 
-### 🛠 Installation (EDIT THIS)
+### 🛠 Installation
 
-1. Download the latest version of `LSB_Secret_Setup.exe` from the [Releases](https://github.com/your-username/LSB_Secret/releases) tab.
+1. Download the latest version of `LSB_Secret_Setup.exe` from the [Releases](https://github.com/Yasser0Hamoda/LSB_Secret/releases) tab.
 2. Run the installer:
    - Installs all dependencies
    - Adds shortcut to Desktop / Start Menu
@@ -98,9 +98,12 @@ The official website provides:
 
 ---
 
-## 🧪 Technologies Used (EDIT This)
+## 🧪 Technologies Used
 
-
+- **PyQt6** For Desktop.
+- **Flutter** For Moblie Application.
+- **Python Flask** For Backend.
+- **HTML, CSS, JS** For Website.
 
 ---
 
